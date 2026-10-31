@@ -36,7 +36,7 @@
 | --- | --- |
 | 필수 (15:30까지 반드시) | ① 영상 속 지정된 대기 구역의 사람 수 탐지 ② 줄이 이어진 위치를 반영한 예상 대기시간 계산 ③ 웹사이트에 혼잡도·예상 대기시간 표시 |
 | 선택 (시간이 남으면) | 일정 간격 자동 갱신, 혼잡도를 색상으로 표시, 마지막 갱신 시각 표시 → 모두 구현: 매초마다 갱신, 혼잡도에 따른 5단계 색상, 갱신 시각 표시) |
-| 추가 구현 | 지나가는 사람 구분하여 걸러내기(인식된 시간·비율·단계 변화 지연), 현실적 CCTV 설치 각도에 따른 사람 인식 기준 선택, 카메라 연결이 끊기면 'OFF' 표시,GCP를 통한 호스팅으로 vm|
+| 추가 구현 | 지나가는 사람 구분하여 걸러내기(인식된 시간·비율·단계 변화 지연), 현실적 CCTV 설치 각도에 따른 사람 인식 기준 선택, 카메라 연결이 끊기면 'OFF' 표시,GCP를 통한 서버 호스팅으로 웹 서버가 24시간 구동되게 함|
 | 제외 (오늘 하지 않음) | 정보 개인별 알림, 필요에 따른 카메라 추가 설치 건의, 디벗에서 웹사이트 사용 건의 |
 
 **완성 여부** (15:30 기준)
@@ -125,7 +125,9 @@ py -3.12 web_server.py
 | `yolov8n.pt` | YOLOv8n 모델 (처음 실행할 때 자동 다운로드) |
 
 ## 5. 실행 화면
-
+https://github.com/papazaza04/solvathon-3-ideal-Idiots/blob/a8861c47b3a797bd6fb3bf1e67fb6884199af827/image%2001.png
+https://github.com/papazaza04/solvathon-3-ideal-Idiots/blob/main/%EF%BD%89%EF%BD%8D%EF%BD%81%EF%BD%87%EF%BD%85%EF%BC%90%EF%BC%92.png
+https://github.com/papazaza04/solvathon-3-ideal-Idiots/blob/main/%EF%BD%89%EF%BD%8D%EF%BD%81%EF%BD%87%EF%BD%85%EF%BC%90%EF%BC%93.png
 
 ## 6. AI 활용
 
@@ -165,7 +167,7 @@ yolov8n이 사람을 인식할 때 발을 기준으로 하는데, 카메라(cctv
 | GitHub 아이디 | 맡은 일 | 주요 파일 |
 | --- | --- | --- |
 | anki77k7-ak | [GCP 서버 호스팅 및 주요 코딩 작업] | [실제 작업한 파일 입력] |
-| papazaza04 | [카메라 인식 프로그램 제작 및 주요 시스템 코딩, 실제 웹사이트와 연결] | [실제 작업한 파일 입력] |
+| papazaza04 | [카메라 인식 프로그램 제작 및 주요 시스템 코딩, 실제 웹사이트와 연결] | cameras.json  queue_monitor.py  status.json  web_server.py  yolov8n.pt |
 | dkboy1729 | README 작성, 웹사이트 실제 작동 확인, 코딩 의견 제시 및 팀원 간 의견 조율 | README |
 
 
